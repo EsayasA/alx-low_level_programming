@@ -16,11 +16,11 @@ int main(void)
 			{
 				if (i != j && j != k)
 				{
-				putchar('i');
-				putchar('j');
-				putchar('k');
+				putchar(i);
+				putchar(j);
+				putchar(k);
 				}
-				if (i != 7)
+				if (i != '7')
 				{
 				putchar(',');
 				putchar(' ');
