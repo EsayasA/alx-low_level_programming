@@ -9,8 +9,8 @@ int main(void)
 int lett;
 for (lett = 'a'; lett <= 'z'; lett++)
 {
-	putchar(lett);
+	_putchar(lett);
 }
-putchar('\n');
+_putchar('\n');
 return (0);
 }
