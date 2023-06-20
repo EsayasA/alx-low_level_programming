@@ -6,18 +6,17 @@
  */
 int main(void)
 {
-	int num1 = 1;
-	int num2 = 2;
-	int sum = 0;
+	int num1 = 0;
+	int num2 = 1;
+	int sum = num1 + num2;
 	int i;
 
-	printf("%d", num1);
-	printf("%d", num2);
-	for (i = 0; i < 48; i++)
+	printf("%d", sum);
+	for (i = 0; i <= 48; i++)
 	{
 		num1 = num2;
-		sum = num1 + num2;
 		num2 = sum;
+		sum = num1 + num2;
 		printf("%d, ", sum);
 	}
 	printf("\n");
