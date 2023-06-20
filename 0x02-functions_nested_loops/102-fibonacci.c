@@ -9,6 +9,7 @@ int main(void)
 	int num1 = 1;
 	int num2 = 2;
 	int sum = 0;
+	int i;
 
 	printf("%d", num1);
 	printf("%d", num2);
