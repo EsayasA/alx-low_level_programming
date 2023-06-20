@@ -4,9 +4,9 @@
  * is written by Esayas
  * Return:0
  */
-int main(void)
+void print_alphabet(void)
 {
-int lett;
+char lett;
 for (lett = 'a'; lett <= 'z'; lett++)
 {
 	_putchar(lett);
