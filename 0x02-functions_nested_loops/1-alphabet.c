@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * main -print _putchar
- * is written by Esayas
+ * print_alphabet
  * Return:0
  */
 void print_alphabet(void)
@@ -12,5 +11,4 @@ for (lett = 'a'; lett <= 'z'; lett++)
 	_putchar(lett);
 }
 _putchar('\n');
-return (0);
 }
