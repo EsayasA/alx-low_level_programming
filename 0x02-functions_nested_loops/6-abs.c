@@ -2,10 +2,10 @@
 #include <stdio.h>
 /**
  * _abs - computes the absolute value of an integer
- * @int:the vlue to be computed
+ * @n:the vlue to be computed
  * Return:abs of the number
  */
-int _abs(int)
+int _abs(int n)
 {
 	if (n >= 0)
 		return (n);
