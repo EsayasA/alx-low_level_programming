@@ -1,7 +1,9 @@
 #include "main.h"
+
 /**
- * print_square - hat prints a square
- * @size:size of 
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 void print_square(int size)
 {
