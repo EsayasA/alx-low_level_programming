@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_array - prints n elements of an array of integers
+ * @a:passed arrrays
  * @n:nuber to be printed
  * Return:void
  */
