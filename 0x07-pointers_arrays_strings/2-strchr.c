@@ -4,6 +4,7 @@
  * *_strchr -  locates a character in a string
  * @s:string
  * @c:character
+ * Return:char
  */
 char *_strchr(char *s, char c)
 {
@@ -16,5 +17,5 @@ char *_strchr(char *s, char c)
 				return (s + i);
 			}
 		}
-		return NULL;
+		return (NULL);
 }
