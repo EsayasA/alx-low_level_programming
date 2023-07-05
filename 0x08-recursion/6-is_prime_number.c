@@ -12,6 +12,7 @@ int is_prime_number(int n)
 /**
  * _prime - prime
  * @n:input
+ * @i:another
  * Return:return
  */
 int _prime(int n, int i)
