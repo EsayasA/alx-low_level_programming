@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * *string_nconcat - string concatenate
  * @s1:string 1
  * @s2:string 2
  * @n:size
@@ -12,14 +13,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s;
 	unsigned int i = 0, j = 0, l, k = 0;
 
-	while(*(s1 + i) != '\0')
-	{
+	while (*(s1 + i) != '\0')
 		i++;
-	}
-	while(*(s2 + j) != '\0')
-	{
+	while (*(s2 + j) != '\0')
 		j++;
-	}
 	if (n < j)
 	{
 		s = malloc(sizeof(char) * (i + n + 1));
@@ -44,14 +41,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			k++;
 		}
 	}
-	else 
+	else
 	{
 		for (; l < (i + j); l++)
 		{
 			*(s + l) = *(s2 + k);
 			k++;
-		}
-	}
+		}}
 	*(s + l) = '\0';
 	return (s);
 }
