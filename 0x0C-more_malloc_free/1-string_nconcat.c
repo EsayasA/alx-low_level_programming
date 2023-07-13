@@ -39,7 +39,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			*(s + l) = *(s2 + k);
 			k++;
-		}}
+		}
+	}
 	*(s + l) = '\0';
 	return (s);
 }
