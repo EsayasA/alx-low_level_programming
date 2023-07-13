@@ -5,13 +5,14 @@
 /**
  * *malloc_checked -  allocates memory using malloc
  * @b:string
+ * Return:alwas sucess 0
  */
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
 	ptr = malloc(b);
-	if(ptr == NULL)
+	if (ptr == NULL)
 	{
 		exit(98);
 	}
