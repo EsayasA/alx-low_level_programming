@@ -3,6 +3,7 @@
 
 /**
  * print_binary - changes to decimal number
+ * @n:teh decimal number
  *
  * Return: the decimal number.
  */
