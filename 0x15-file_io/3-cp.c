@@ -10,14 +10,16 @@ void to_close(int fd);
  */
 char *to_create(char *file)
 {
-	file = malloc(sizeof(char) * 1024);
-	if (file == NULL)
+	char *buf;
+
+	buf = malloc(sizeof(char) * 1024);
+	if (buf == NULL)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
-	return (file);
+	return (buf);
 }
 /**
  * to_close - closing function
