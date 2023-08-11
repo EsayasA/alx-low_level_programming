@@ -80,5 +80,3 @@ int main(int argc, char *argv[])
 	to_close(dest);
 	return (0);
 }
-
-
