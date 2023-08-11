@@ -13,7 +13,8 @@ char *to_create(char *file)
 	file = malloc(sizeof(char) * 1024);
 	if (file == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (file);
@@ -56,14 +57,16 @@ int main(int argc, char *argv[])
 	do {
 		if (source == -1 || rd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
 		wr = write(dest, buf, rd);
 		if (dest == -1 || wr == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", argv[2]);
 			free(buf);
 			exit(99);
 		}
