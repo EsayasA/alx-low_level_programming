@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		rd = read(source, buf, 1024);
-		dest = open(argv[2], O_WRONLY || O_APPEND);
+		dest = open(argv[2], O_WRONLY | O_APPEND);
 	} while (rd > 0);
 	free(buf);
 	to_close(source);
