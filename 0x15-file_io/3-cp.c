@@ -39,7 +39,7 @@ void to_close(int fd)
  * @argv:array
  * Return:returned
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int source, dest, rd, wr;
 	char *buf;
@@ -70,7 +70,7 @@ int main (int argc, char *argv[])
 		rd = read(source, buf, 1024);
 		dest = open(argv[2], O_WRONLY || O_APPEND);
 	} while (rd > 0);
-	free (buf);
+	free(buf);
 	to_close(source);
 	to_close(dest);
 	return (0);
