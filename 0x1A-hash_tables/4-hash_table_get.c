@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 /**
- * hash_table_get - get with the function
+ * hash_table_get - function
  * @ht:pointer
  * @key:key
- * Return:check it
+ * Return:return the value
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
