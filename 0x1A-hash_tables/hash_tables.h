@@ -20,15 +20,15 @@ typedef struct hash_node_s
 
 /**
  * struct hash_table_s - Hash table data structure
- * @size: The size of the array
- * @array: An array of size @size
+ * @s: The size of the array
+ * @arr: An array of size @size
  * Each cell of this array is a pointer to the first node of a linked list,
  * because we want our HashTable to use a Chaining collision handling
  */
 typedef struct hash_table_s
 {
-	unsigned long int size;
-	hash_node_t **array;
+	unsigned long int s;
+	hash_node_t **arr;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
@@ -59,8 +59,8 @@ typedef struct shash_node_s
 
 /**
  * struct shash_table_s - Sorted hash table data structure
- * @size: The size of the array
- * @array: An array of size @size
+ * @s: The size of the array
+ * @arr: An array of size @size
  * Each cell of this array is a pointer to the first node of a linked list,
  * because we want our HashTable to use a Chaining collision handling
  * @shead: A pointer to the first element of the sorted linked list
@@ -68,8 +68,8 @@ typedef struct shash_node_s
  */
 typedef struct shash_table_s
 {
-	unsigned long int size;
-	shash_node_t **array;
+	unsigned long int s;
+	shash_node_t **arr;
 	shash_node_t *shead;
 	shash_node_t *stail;
 } shash_table_t;
