@@ -1,19 +1,17 @@
 #include "hash_tables.h"
 /**
- * hash_djb2 - name of the function
+ * hash_djb2 - function for hash table
  * @str:str
- * Return:returns pointer
+ * Return:it returns hash
  */
-unsigned long int hash_djb2(const unsigned char *st)
+unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int ha;
-	int c;
+	int ch;
 
 	ha = 5381;
-	while ((c = *st++))
-	{
-		ha = ((ha << 5) + ha) + c;
-	}
+	while ((ch = *str++))
+		ha = ((ha << 5) + ha) + ch;
+
 	return (ha);
 }
-

@@ -1,50 +1,50 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - that adds function
- * @h:pointer
- * @k:key
- * @v:value
- * Return:return 1 or 0
+ * hash_table_set - update
+ * @ht:pointer
+ * @key:key
+ * @value:value
+ * Return:0 or 1
  */
-int hash_table_set(hash_table_t *h, const char *k, const char *v)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int indx = 0;
-	char *vcopy, *kcopy;
-	hash_node_t  *bucket, *new_node;
+	hash_node_t *n;
+	char *copy;
+	unsigned long int indx, j;
 
-	if (!h || !k || !*k || !v)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	vcopy = strdup(v);
-	if (!vcopy)
+	vcopy = strdup(value);
+	if (vcopy == NULL)
 		return (0);
 
-	indx = key_index((const unsigned char *)k, h->s);
-	bucket = h->arr[indx];
-
-	while (bucket)
+	indx = key_index((const unsigned char *)key, ht->size);
+	for (j = indx; ht->array[j]; j++)
 	{
-		if (!strcmp(k, bucket->k))
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(bucket->v);
-			bucket->v = vcopy;
+			free(ht->array[i]->value);
+			ht->array[i]->value = vcopy;
 			return (1);
 		}
-		bucket = bucket->next;
 	}
-	new_node = calloc(1, sizeof(hash_node_t));
-	if (new_node == NULL)
+
+	n = malloc(sizeof(hash_node_t));
+	if (n == NULL)
 	{
 		free(vcopy);
 		return (0);
 	}
-	kcopy = strdup(k);
-	if (!kcopy)
+	n->key = strdup(key);
+	if (n->key == NULL)
+	{
+		free(n);
 		return (0);
-	new_node->k = kcopy;
-	new_node->v = vcopy;
-	new_node->next = h->arr[indx];
-	ht->arr[indx] = new_node;
+	}
+	new->value = vcopy;
+	n->next = ht->array[indx];
+	ht->array[indx] = n;
+
 	return (1);
 }
-
